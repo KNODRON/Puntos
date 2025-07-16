@@ -1,11 +1,16 @@
 const sendBtn = document.getElementById("sendBtn");
 sendBtn.addEventListener("click", () => {
-  let mensaje = "PUNTOS\n\n";
+  // Título principal con nombre del departamento
+  const departamento = document.getElementById("campo0").value.trim();
+  let mensaje = "";
+
+  if (departamento !== "") {
+    mensaje += `DEPTO. O.S.9. (${departamento})\n\n`;
+  }
 
   const campos = [
-    { id: "campo0", label: "DEPARTAMENTO" },
     { id: "campo1", label: "1.- TIPIFICACIÓN" },
-    { id: "campo2", label: "2.- HORA" },
+    { id: "campo2", label: "2.- FECHA" }, // Cambié HORA por FECHA como en tu ejemplo
     { id: "campo3", label: "3.- LUGAR" },
     { id: "campo4", label: "4.- COMUNA" },
     { id: "campo5", label: "5.- UNIDAD" },
