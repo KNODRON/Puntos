@@ -1,5 +1,3 @@
-// script.js
-
 const sendBtn = document.getElementById("sendBtn");
 sendBtn.addEventListener("click", () => {
   let mensaje = "PUNTOS\n\n";
