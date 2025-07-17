@@ -98,3 +98,19 @@ sendBtn.addEventListener("click", () => {
   const link = `https://wa.me/?text=${mensajeCodificado}`;
   window.open(link, "_blank");
 });
+// Formatear automáticamente el campo hora (campo2)
+const horaInput = document.getElementById("campo2");
+
+horaInput.addEventListener("input", (e) => {
+  let valor = e.target.value.replace(/[^0-9]/g, "").slice(0, 4);
+  if (valor.length >= 3) {
+    valor = valor.slice(0, 2) + ":" + valor.slice(2);
+  }
+  e.target.value = valor;
+});
+
+horaInput.addEventListener("blur", () => {
+  if (horaInput.value && !horaInput.value.includes("hrs")) {
+    horaInput.value += " hrs";
+  }
+});
