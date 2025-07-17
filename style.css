@@ -1,56 +1,32 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f2;
-  padding: 20px;
-  color: #333;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  margin: 0;
-  color: #0f9d58;
-  font-size: 2rem;
-}
-
-.logo-os9 {
-  height: 60px;
-  width: auto;
-}
-
+/* Mejora de separación */
 label {
   display: block;
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: bold;
   color: #0f9d58;
 }
 
+/* Menos espacio vertical entre inputs */
 input {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+  padding: 8px;
+  margin-top: 3px;
+  margin-bottom: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
 }
 
-#sendBtn {
-  margin-top: 30px;
-  background-color: #0f9d58;
-  color: white;
-  border: none;
-  padding: 15px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
+/* Botones sí / no bonitos y alineados */
+#campo7-opciones {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 10px 0;
 }
 
-#sendBtn:hover {
-  background-color: #0c854a;
+#campo7-opciones label {
+  margin: 0;
+  color: #0f9d58;
+  font-weight: 500;
 }
