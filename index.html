@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUNTOS</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f9d58" />
+  <link rel="icon" href="icon.png" type="image/png" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -77,5 +83,14 @@
   <button id="sendBtn">Enviar a WhatsApp</button>
 
   <script src="script.js"></script>
+
+  <!-- Registro de Service Worker para PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker registrado'))
+        .catch(error => console.error('❌ Error registrando Service Worker:', error));
+    }
+  </script>
 </body>
 </html>
