@@ -18,7 +18,7 @@
   <input type="text" id="campo1" />
 
   <label for="campo2">2.- HORA:</label>
-  <input type="text" id="campo2" />
+  <input type="text" id="campo2" inputmode="numeric" pattern="[0-9]{2}:[0-9]{2}" placeholder="HH:MM" />
 
   <label for="campo3">3.- LUGAR:</label>
   <input type="text" id="campo3" />
@@ -33,7 +33,34 @@
   <input type="text" id="campo6" />
 
   <label for="campo7">7.- IDENTIDAD DETENIDOS:</label>
-  <input type="text" id="campo7" />
+  <div id="campo7-opciones">
+    <input type="radio" name="detenido" id="detenido-si" value="si" /> <label for="detenido-si">Sí</label>
+    <input type="radio" name="detenido" id="detenido-no" value="no" /> <label for="detenido-no">No</label>
+  </div>
+
+  <div id="detenidos-container" style="display: none;">
+    <div class="detenido" id="detenido-template">
+      <h4>DETENIDO 1</h4>
+      <label>IDENTIDAD:</label>
+      <input type="text" class="identidad" />
+
+      <label>RUN:</label>
+      <input type="text" class="run" />
+
+      <label>EDAD:</label>
+      <input type="text" class="edad" />
+
+      <label>NACIONALIDAD:</label>
+      <input type="text" class="nacionalidad" />
+
+      <label>ANTECEDENTES PENALES:</label>
+      <input type="text" class="penales" />
+
+      <label>ANTECEDENTES POLICIALES:</label>
+      <input type="text" class="policiales" />
+    </div>
+  </div>
+  <button type="button" id="agregar-detenido" style="display: none; margin-top: 10px;">➕ Agregar detenido</button>
 
   <label for="campo8">8.- INCAUTACIÓN:</label>
   <input type="text" id="campo8" />
