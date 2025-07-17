@@ -4,7 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUNTOS</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f2;
+      padding: 15px;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #0f9d58;
+      font-size: 1.8rem;
+      flex: 1;
+    }
+
+    .logo-os9 {
+      height: 60px;
+      max-width: 100px;
+      object-fit: contain;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #0f9d58;
+      font-size: 0.95rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 3px;
+      margin-bottom: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    #campo7-opciones {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin: 10px 0 15px;
+    }
+
+    #campo7-opciones label {
+      margin: 0;
+      color: #0f9d58;
+      font-weight: 500;
+    }
+
+    #sendBtn,
+    #agregar-detenido {
+      margin-top: 20px;
+      background-color: #0f9d58;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    #sendBtn:hover,
+    #agregar-detenido:hover {
+      background-color: #0c854a;
+    }
+
+    .detenido {
+      background-color: #e6f4ec;
+      border: 1px solid #b2d8c7;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .detenido h4 {
+      margin-top: 0;
+      color: #0f9d58;
+    }
+  </style>
 </head>
 <body>
   <div class="header">
@@ -34,8 +125,10 @@
 
   <label for="campo7">7.- IDENTIDAD DETENIDOS:</label>
   <div id="campo7-opciones">
-    <input type="radio" name="detenido" id="detenido-si" value="si" /> <label for="detenido-si">Sí</label>
-    <input type="radio" name="detenido" id="detenido-no" value="no" /> <label for="detenido-no">No</label>
+    <input type="radio" name="detenido" id="detenido-si" value="si" />
+    <label for="detenido-si">Sí</label>
+    <input type="radio" name="detenido" id="detenido-no" value="no" />
+    <label for="detenido-no">No</label>
   </div>
 
   <div id="detenidos-container" style="display: none;">
@@ -60,7 +153,8 @@
       <input type="text" class="policiales" />
     </div>
   </div>
-  <button type="button" id="agregar-detenido" style="display: none; margin-top: 10px;">➕ Agregar detenido</button>
+
+  <button type="button" id="agregar-detenido" style="display: none;">➕ Agregar detenido</button>
 
   <label for="campo8">8.- INCAUTACIÓN:</label>
   <input type="text" id="campo8" />
