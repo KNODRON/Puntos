@@ -72,12 +72,14 @@ sendBtn.addEventListener("click", () => {
       const policiales = bloque.querySelector(".policiales").value.trim();
 
       mensaje += `\nDETENIDO ${i + 1}\n`;
-      if (identidad) mensaje += `IDENTIDAD: ${identidad}\n`;
-      if (run) mensaje += `RUN: ${run}\n`;
-      if (edad) mensaje += `EDAD: ${edad}\n`;
-      if (nacionalidad) mensaje += `NACIONALIDAD: ${nacionalidad}\n`;
-      if (penales) mensaje += `ANTECEDENTES PENALES: ${penales}\n`;
-      if (policiales) mensaje += `ANTECEDENTES POLICIALES: ${policiales}\n`;
+      if (identidad) mensaje += `- IDENTIDAD: ${identidad}\n`;
+      if (run) mensaje += `- RUN: ${run}\n`;
+      if (edad) mensaje += `- EDAD: ${edad}\n`;
+      if (nacionalidad) mensaje += `- NACIONALIDAD: ${nacionalidad}\n`;
+      if (penales) mensaje += `- ANTECEDENTES PENALES: ${penales}\n`;
+      if (policiales) mensaje += `- ANTECEDENTES POLICIALES: ${policiales}\n`;
+
+      mensaje += `\n`; // Espacio después del bloque de detenido
     });
   }
 
