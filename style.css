@@ -1,41 +1,18 @@
-/* Mejora de separación */
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #0f9d58;
+/* Fondo y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f2;
+  padding: 15px;
+  color: #333;
 }
 
-/* Menos espacio vertical entre inputs */
-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 3px;
-  margin-bottom: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-/* Botones sí / no bonitos y alineados */
-#campo7-opciones {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin: 10px 0;
-}
-
-#campo7-opciones label {
-  margin: 0;
-  color: #0f9d58;
-  font-weight: 500;
-}
+/* Encabezado con logo y título alineados */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
   gap: 10px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
@@ -50,4 +27,71 @@ input {
   height: 60px;
   max-width: 100px;
   object-fit: contain;
+}
+
+/* Estilo de etiquetas */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0f9d58;
+  font-size: 0.95rem;
+}
+
+/* Inputs más compactos */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 3px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Radio buttons en línea */
+#campo7-opciones {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 10px 0 15px;
+}
+
+#campo7-opciones label {
+  margin: 0;
+  color: #0f9d58;
+  font-weight: 500;
+}
+
+/* Estilo del botón de WhatsApp */
+#sendBtn,
+#agregar-detenido {
+  margin-top: 20px;
+  background-color: #0f9d58;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#sendBtn:hover,
+#agregar-detenido:hover {
+  background-color: #0c854a;
+}
+
+/* Bloques de detenido más visuales */
+.detenido {
+  background-color: #e6f4ec;
+  border: 1px solid #b2d8c7;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.detenido h4 {
+  margin-top: 0;
+  color: #0f9d58;
 }
