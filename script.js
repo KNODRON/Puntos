@@ -15,7 +15,6 @@ radioSi.addEventListener("change", () => {
 radioNo.addEventListener("change", () => {
   contenedorDetenidos.style.display = "none";
   botonAgregar.style.display = "none";
-  // Eliminar todos los detenidos adicionales excepto el primero
   const detenidos = document.querySelectorAll(".detenido");
   detenidos.forEach((el, i) => {
     if (i > 0) el.remove();
@@ -41,7 +40,7 @@ sendBtn.addEventListener("click", () => {
   let mensaje = "";
 
   if (departamento !== "") {
-    mensaje += `DEPTO. O.S.9. (${departamento})\n\n`;
+    mensaje += `${departamento}\n\n`;
   }
 
   const campos = [
@@ -62,7 +61,6 @@ sendBtn.addEventListener("click", () => {
     }
   }
 
-  // DETENIDOS
   if (radioSi.checked) {
     const bloques = document.querySelectorAll(".detenido");
     bloques.forEach((bloque, i) => {
@@ -83,7 +81,6 @@ sendBtn.addEventListener("click", () => {
     });
   }
 
-  // Restantes
   const resto = [
     { id: "campo8", label: "8.- INCAUTACIÓN" },
     { id: "campo9", label: "9.- FISCALÍA" },
