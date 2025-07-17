@@ -4,98 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUNTOS</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f4f2;
-      padding: 15px;
-      color: #333;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .header h1 {
-      margin: 0;
-      color: #0f9d58;
-      font-size: 1.8rem;
-      flex: 1;
-    }
-
-    .logo-os9 {
-      height: 60px;
-      max-width: 100px;
-      object-fit: contain;
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #0f9d58;
-      font-size: 0.95rem;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 3px;
-      margin-bottom: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    #campo7-opciones {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin: 10px 0 15px;
-    }
-
-    #campo7-opciones label {
-      margin: 0;
-      color: #0f9d58;
-      font-weight: 500;
-    }
-
-    #sendBtn,
-    #agregar-detenido {
-      margin-top: 20px;
-      background-color: #0f9d58;
-      color: white;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    #sendBtn:hover,
-    #agregar-detenido:hover {
-      background-color: #0c854a;
-    }
-
-    .detenido {
-      background-color: #e6f4ec;
-      border: 1px solid #b2d8c7;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-    }
-
-    .detenido h4 {
-      margin-top: 0;
-      color: #0f9d58;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="header">
@@ -109,7 +18,7 @@
   <input type="text" id="campo1" />
 
   <label for="campo2">2.- HORA:</label>
-  <input type="text" id="campo2" inputmode="numeric" pattern="[0-9]{2}:[0-9]{2}" placeholder="HH:MM" />
+  <input type="text" id="campo2" inputmode="numeric" placeholder="HH:MM hrs" />
 
   <label for="campo3">3.- LUGAR:</label>
   <input type="text" id="campo3" />
@@ -138,10 +47,10 @@
       <input type="text" class="identidad" />
 
       <label>RUN:</label>
-      <input type="text" class="run" />
+      <input type="text" class="run" inputmode="numeric" />
 
       <label>EDAD:</label>
-      <input type="text" class="edad" />
+      <input type="text" class="edad" inputmode="numeric" />
 
       <label>NACIONALIDAD:</label>
       <input type="text" class="nacionalidad" />
