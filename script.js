@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     horaInput.value = value;
   });
 
-  // Lógica para mostrar campos de detenidos
+  // Mostrar campos detenidos
   radiosDetenido.forEach((radio) => {
     radio.addEventListener("change", () => {
       if (radio.value === "si") {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Agregar más detenidos (hasta 5)
+  // Agregar hasta 5 detenidos
   let cantidadDetenidos = 1;
   btnAgregarDetenido.addEventListener("click", () => {
     if (cantidadDetenidos >= 5) return;
@@ -39,22 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nuevo.id = "";
     nuevo.querySelector("h4").textContent = `DETENIDO ${cantidadDetenidos}`;
+    
+    // Limpiar campos del nuevo detenido
+    nuevo.querySelectorAll("input").forEach((input) => input.value = "");
+
+    // Separación visual
     containerDetenidos.appendChild(document.createElement("hr"));
     containerDetenidos.appendChild(nuevo);
   });
 
-  // Mostrar/ocultar campo 10 según selección
+  // Mostrar campo extra del punto 10
   cuenta10Radios.forEach((radio) => {
     radio.addEventListener("change", () => {
-      if (radio.value === "si") {
-        cuenta10Detalle.style.display = "block";
-      } else {
-        cuenta10Detalle.style.display = "none";
-      }
+      cuenta10Detalle.style.display = radio.value === "si" ? "block" : "none";
     });
   });
 
-  // Botón Enviar a WhatsApp
+  // Botón Enviar
   document.getElementById("sendBtn").addEventListener("click", () => {
     let mensaje = "";
     const campo0 = document.getElementById("campo0").value.trim();
@@ -74,11 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (valor !== "") mensaje += `${campo.label}: ${valor}\n`;
     }
 
-    // Campo 7 Detenidos
+    // Campo 7: Detenidos
     const detenidoSI = document.getElementById("detenido-si").checked;
     const detenidoNO = document.getElementById("detenido-no").checked;
 
-    
     mensaje += `7.- IDENTIDAD DETENIDOS:\n`;
     if (detenidoSI) {
       const bloques = document.querySelectorAll(".detenido");
@@ -103,13 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
       mensaje += `No hay detenidos\n`;
     }
 
-    // Campo 8-9 normales
+    // Campo 8 y 9
     const campo8 = document.getElementById("campo8").value.trim();
     const campo9 = document.getElementById("campo9").value.trim();
     if (campo8) mensaje += `8.- INCAUTACIÓN: ${campo8}\n`;
     if (campo9) mensaje += `9.- FISCALÍA: ${campo9}\n`;
 
-    // Campo 10 especial
+    // Campo 10
     const cuentaSI = document.getElementById("cuenta10-si").checked;
     const cuentaNO = document.getElementById("cuenta10-no").checked;
     mensaje += `10.- CUENTA OS1: `;
@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mensaje += "No por parte de este Depto.\n";
     }
 
+    // Enviar mensaje
     const mensajeCodificado = encodeURIComponent(mensaje);
     const link = `https://wa.me/?text=${mensajeCodificado}`;
     window.open(link, "_blank");
