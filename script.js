@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const detenidoSI = document.getElementById("detenido-si").checked;
     const detenidoNO = document.getElementById("detenido-no").checked;
 
+    
     mensaje += `7.- IDENTIDAD DETENIDOS:\n`;
     if (detenidoSI) {
       const bloques = document.querySelectorAll(".detenido");
