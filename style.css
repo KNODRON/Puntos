@@ -1,105 +1,86 @@
-/* Fondo y tipografía */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f4f2;
-  padding: 15px;
   color: #333;
+  padding: 1rem;
+  margin: 0;
 }
 
-/* Encabezado con logo y título alineados */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  background-color: #0f9d58;
+  color: white;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 
 .header h1 {
   margin: 0;
-  color: #0f9d58;
-  font-size: 1.8rem;
-  flex: 1;
+  font-size: 1.5rem;
 }
 
 .logo-os9 {
-  height: 60px;
-  max-width: 100px;
-  object-fit: contain;
+  height: 50px;
 }
 
-/* Estilo de etiquetas */
 label {
   display: block;
-  margin-top: 5px;
-  margin-bottom: 2px;
+  margin-top: 0.75rem;
   font-weight: bold;
-  color: #0f9d58;
-  font-size: 0.95rem;
 }
 
-/* Inputs más compactos */
-input {
+input[type="text"] {
   width: 100%;
-  padding: 8px;
-  margin-top: 3px;
-  margin-bottom: 8px;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1rem;
 }
 
-/* Radio buttons en línea */
-#campo7-opciones {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin: 10px 0 15px;
-}
-
-#campo7-opciones label {
-  margin: 0;
-  color: #0f9d58;
-  font-weight: 500;
-}
-
-/* Estilo del botón de WhatsApp */
-#sendBtn,
-#agregar-detenido {
-  margin-top: 20px;
+button {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0.75rem 1.5rem;
   background-color: #0f9d58;
   color: white;
+  font-size: 1rem;
   border: none;
-  padding: 12px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-#sendBtn:hover,
-#agregar-detenido:hover {
-  background-color: #0c854a;
+button:hover {
+  background-color: #0c7d44;
 }
 
-/* Bloques de detenido más visuales */
+#campo7-opciones,
+#cuenta10-opciones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+#detenidos-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #e8f5e9;
+  border-radius: 0.5rem;
+}
+
 .detenido {
-  background-color: #e6f4ec;
-  border: 1px solid #b2d8c7;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
+  margin-bottom: 1.5rem;
 }
 
 .detenido h4 {
-  margin-top: 0;
+  margin-top: 1rem;
+  font-size: 1.1rem;
   color: #0f9d58;
 }
 
-.opciones-radio {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+#cuenta10-detalle {
+  margin-top: 0.5rem;
 }
