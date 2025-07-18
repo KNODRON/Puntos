@@ -4,12 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUNTOS</title>
-
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#0f9d58" />
-  <link rel="icon" href="icon.png" type="image/png" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -77,20 +71,20 @@
   <label for="campo9">9.- FISCALÍA:</label>
   <input type="text" id="campo9" />
 
-  <label for="campo10">10.- CUENTA OS1:</label>
-  <input type="text" id="campo10" />
+  <label>10.- CUENTA OS1:</label>
+  <div id="cuenta10-opciones">
+    <input type="radio" name="cuenta10" id="cuenta10-si" value="si" />
+    <label for="cuenta10-si">Sí</label>
+    <input type="radio" name="cuenta10" id="cuenta10-no" value="no" />
+    <label for="cuenta10-no">No</label>
+  </div>
+
+  <div id="cuenta10-detalle" style="display: none;">
+    <input type="text" id="campo10" placeholder="Ingrese detalle..." />
+  </div>
 
   <button id="sendBtn">Enviar a WhatsApp</button>
 
   <script src="script.js"></script>
-
-  <!-- Registro de Service Worker para PWA -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('✅ Service Worker registrado'))
-        .catch(error => console.error('❌ Error registrando Service Worker:', error));
-    }
-  </script>
 </body>
 </html>
