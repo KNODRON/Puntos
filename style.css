@@ -96,3 +96,10 @@ input {
   margin-top: 0;
   color: #0f9d58;
 }
+
+.opciones-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
