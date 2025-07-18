@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (run) mensaje += `RUN: ${run}\n`;
         if (edad) mensaje += `EDAD: ${edad}\n`;
         if (nacionalidad) mensaje += `NACIONALIDAD: ${nacionalidad}\n`;
-        if (penales) mensaje += `ANTECEDENTES PENALES: ${penales}\n`;
-        if (policiales) mensaje += `ANTECEDENTES POLICIALES: ${policiales}\n`;
+        if (penales) mensaje += `ANTEPEN: ${penales}\n`;
+        if (policiales) mensaje += `ANTPOL: ${policiales}\n`;
         mensaje += `\n`;
       });
     } else if (detenidoNO) {
